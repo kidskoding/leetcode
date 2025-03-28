@@ -1,0 +1,19 @@
+
+# Treat Xmake configuration and lock files as text
+.xmake/* text eol=lf
+
+# Ensure Lua scripts (used in Xmake) are treated as text
+*.lua text eol=lf
+
+# Ignore binary files from diffing
+*.obj binary
+*.exe binary
+*.dll binary
+*.lib binary
+*.a binary
+*.so binary
+*.o binary
+
+# Prevent Git from normalizing line endings in scripts
+*.sh text eol=lf
+*.bat text eol=crlf
