@@ -8,9 +8,8 @@ std::vector<int> twoSum(std::vector<int>& nums, int target) {
 		int difference = target - nums[i];
 		if(map.find(difference) != map.end()) {
 			return {map[difference], i};
-		} else {
-			map.insert(std::make_pair(nums[i], i));
 		}
+		map.insert(std::make_pair(nums[i], i));
 	}
 	return {};
 }

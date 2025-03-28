@@ -9,4 +9,6 @@ std::vector<int> twoSum(std::vector<int>& nums, int target);
 std::string reverseVowels(std::string s);
 bool isVowel(char c);
 
-#endif
+std::vector<int> dailyTemperatures(std::vector<int> temperatures);
+
+#endif // MAIN_H
