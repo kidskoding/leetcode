@@ -12,5 +12,5 @@ std::vector<int> twoSum(std::vector<int>& nums, int target) {
 			map.insert(std::make_pair(nums[i], i));
 		}
 	}
-	return std::vector<int>();
+	return {};
 }
