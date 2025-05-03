@@ -14,5 +14,9 @@ std::string reverseStr(std::string& s, int k);
 bool hasCycle(ListNode *head);
 bool isPalindrome(ListNode *head);
 ListNode* swapPairs(ListNode *head);
+ListNode* reverseList(ListNode *head);
+ListNode* mergeTwoLists(ListNode *list1, ListNode *list2);
+ListNode* deleteDuplicates(ListNode *head);
+ListNode* removeElements(ListNode *head, int val);
 
 #endif // MAIN_HPP
