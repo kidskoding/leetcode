@@ -18,5 +18,6 @@ ListNode* reverseList(ListNode *head);
 ListNode* mergeTwoLists(ListNode *list1, ListNode *list2);
 ListNode* deleteDuplicates(ListNode *head);
 ListNode* removeElements(ListNode *head, int val);
+ListNode* middleNode(ListNode *head);
 
 #endif // MAIN_HPP
