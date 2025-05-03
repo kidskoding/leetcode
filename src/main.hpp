@@ -13,5 +13,6 @@ std::string reverseStr(std::string& s, int k);
 // Linked List stuff
 bool hasCycle(ListNode *head);
 bool isPalindrome(ListNode *head);
+ListNode* swapPairs(ListNode *head);
 
 #endif // MAIN_HPP
