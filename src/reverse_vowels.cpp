@@ -1,4 +1,6 @@
-#include "main.h"
+#include "main.hpp"
+#include "reverse_vowels.hpp"
+
 #include <algorithm>
 #include <array>
 #include <cctype>

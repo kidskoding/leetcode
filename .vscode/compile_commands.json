@@ -1,0 +1,6 @@
+[
+{
+  "directory": "/Users/anirudh/code-playgrounds/leetcode",
+  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++11", "-Ialgorithms", "-I../../build/.gens/leetcode/macosx/arm64/release/platform/windows/idl", "-DNDEBUG", "-o", "../../build/.objs/leetcode/macosx/arm64/release/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
+}]

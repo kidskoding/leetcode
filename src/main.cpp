@@ -1,6 +1,8 @@
+#include "main.hpp"
 #include <iostream>
 
 int main(int argc, char** argv) {
-    std::cout << "hello world!" << std::endl;
-    return 0;
+    std::string s = "abcdefg";
+    std::string result = reverseStr(s, 2);
+    std::cout << result << "\n";
 }

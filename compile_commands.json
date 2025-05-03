@@ -1,16 +1,26 @@
 [
 {
   "directory": "/Users/anirudh/code-playgrounds/leetcode",
-  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++11", "-DNDEBUG", "-o", "build/.objs/leetcode/macosx/arm64/release/src/reverse_vowels.cpp.o", "src/reverse_vowels.cpp"],
+  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++11", "-Ialgorithms", "-Ibuild/.gens/leetcode/macosx/arm64/release/platform/windows/idl", "-DNDEBUG", "-o", "build/.objs/leetcode/macosx/arm64/release/src/reverse_vowels.cpp.o", "src/reverse_vowels.cpp"],
   "file": "src/reverse_vowels.cpp"
 },
 {
   "directory": "/Users/anirudh/code-playgrounds/leetcode",
-  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++11", "-DNDEBUG", "-o", "build/.objs/leetcode/macosx/arm64/release/src/two_sum.cpp.o", "src/two_sum.cpp"],
+  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++11", "-Ialgorithms", "-Ibuild/.gens/leetcode/macosx/arm64/release/platform/windows/idl", "-DNDEBUG", "-o", "build/.objs/leetcode/macosx/arm64/release/src/daily_temperatures.cpp.o", "src/daily_temperatures.cpp"],
+  "file": "src/daily_temperatures.cpp"
+},
+{
+  "directory": "/Users/anirudh/code-playgrounds/leetcode",
+  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++11", "-Ialgorithms", "-Ibuild/.gens/leetcode/macosx/arm64/release/platform/windows/idl", "-DNDEBUG", "-o", "build/.objs/leetcode/macosx/arm64/release/src/two_sum.cpp.o", "src/two_sum.cpp"],
   "file": "src/two_sum.cpp"
 },
 {
   "directory": "/Users/anirudh/code-playgrounds/leetcode",
-  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++11", "-DNDEBUG", "-o", "build/.objs/leetcode/macosx/arm64/release/src/main.cpp.o", "src/main.cpp"],
+  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++11", "-Ialgorithms", "-Ibuild/.gens/leetcode/macosx/arm64/release/platform/windows/idl", "-DNDEBUG", "-o", "build/.objs/leetcode/macosx/arm64/release/src/reverse_string_ii.cpp.o", "src/reverse_string_ii.cpp"],
+  "file": "src/reverse_string_ii.cpp"
+},
+{
+  "directory": "/Users/anirudh/code-playgrounds/leetcode",
+  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++11", "-Ialgorithms", "-Ibuild/.gens/leetcode/macosx/arm64/release/platform/windows/idl", "-DNDEBUG", "-o", "build/.objs/leetcode/macosx/arm64/release/src/main.cpp.o", "src/main.cpp"],
   "file": "src/main.cpp"
 }]
