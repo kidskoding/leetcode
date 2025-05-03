@@ -9,6 +9,9 @@ std::vector<int> twoSum(std::vector<int>& nums, int target);
 std::string reverseVowels(std::string s);
 std::vector<int> dailyTemperatures(std::vector<int> temperatures);
 std::string reverseStr(std::string& s, int k);
+
+// Linked List stuff
 bool hasCycle(ListNode *head);
+bool isPalindrome(ListNode *head);
 
 #endif // MAIN_HPP
