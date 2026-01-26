@@ -1,6 +1,4 @@
-from typing import List
-
-def productExceptSelf(nums: List[int]) -> List[int]:
+def productExceptSelf(nums):
     n = len(nums)
     res = [1] * n
     prefix = suffix = 1

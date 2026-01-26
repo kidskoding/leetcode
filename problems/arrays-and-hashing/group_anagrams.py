@@ -1,7 +1,7 @@
 from collections import defaultdict
 from typing import List
 
-def groupAnagrams(strs: List[str]) -> List[List[str]]:
+def groupAnagrams(strs):
     anagrams = defaultdict(list)
     for s in strs:
         key = str(sorted(s))

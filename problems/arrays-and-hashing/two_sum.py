@@ -1,6 +1,4 @@
-from typing import List
-
-def twoSum(nums: List[int], target: int) -> List[int]:
+def twoSum(nums, target):
     dict = {}
     
     for (i, x) in enumerate(nums):

@@ -1,22 +1,19 @@
-from collections import defaultdict
-
-# Create a graph in the form of a dictionary
-graph = defaultdict(list)
-
-# Can be any number for n, depending on problem
-n = 10 
-visited = [0] * n
-
-def dfs(node):
-    if visited[node] == 1:
-        return False
-    if visited[node] == 2:
-        return True
-    
-    visited[node] = 1
+def dfs(graph, node, visited):
+    if visited[node]:  # already visited
+        return
+    visited[node] = True
     for neighbor in graph[node]:
-        if not dfs(neighbor):
+        dfs(graph, neighbor, visited)
+
+# DFS with cycle detection (useful for course schedule)
+def dfs_cycle(graph, node, visited):
+    if visited[node] == 1:  # visiting → found a cycle
+        return False
+    if visited[node] == 2:  # already visited
+        return True
+    visited[node] = 1  # mark as visiting
+    for neighbor in graph[node]:
+        if not dfs_cycle(graph, neighbor, visited):
             return False
-        
-    visited[node] = 2
+    visited[node] = 2  # mark as visited
     return True
