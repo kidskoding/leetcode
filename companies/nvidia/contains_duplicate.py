@@ -18,7 +18,7 @@ def contains_duplicate(nums):
         seen.add(x)
         
     '''
-        If no elements repeat, meaning they don't reappear in nums when they have already been added to seen,
+        3. If no elements repeat, meaning they don't reappear in nums when they have already been added to seen,
         then we can just return false. In this scenario, all elements are distinct
     '''
     return False
