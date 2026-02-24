@@ -1,17 +1,18 @@
 from base.treenode import TreeNode
-from companies.nvidia.right_side_view import rightSideView
+from problems.trees.is_balanced import isBalanced
 
 root = TreeNode(
     1,
     TreeNode(
         2,
         None,
-        TreeNode(5)
+        None
     ),
     TreeNode(
-        3,
+        TreeNode(4, TreeNode(5), None),
         None,
-        TreeNode(4)
+        None
     )
 )
-print(rightSideView(root))
+
+print(isBalanced(root))
