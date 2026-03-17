@@ -17,3 +17,16 @@ def dfs_cycle(graph, node, visited):
             return False
     visited[node] = 2  # mark as visited
     return True
+
+# DFS on a grid
+def dfs(grid, r, c):
+    if r < 0 or r >= len(grid) or c < 0 or c >= len(grid[0]):
+        return
+    if grid[r][c] != '1':
+        return
+    
+    grid[r][c] = '0'
+    dfs(grid, r+1, c)
+    dfs(grid, r-1, c)
+    dfs(grid, r, c+1)
+    dfs(grid, r, c-1)
