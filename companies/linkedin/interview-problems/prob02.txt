@@ -1,22 +1,34 @@
 """
-Number of Provinces
+Word Break
 
-There are n cities. Some of them are connected directly. You are given an 
-n x n matrix isConnected where isConnected[i][j] = 1 if city i and city j 
-are directly connected, and 0 otherwise.
+Given a string s and a list of strings wordDict, determine if s can be 
+segmented into a space-separated sequence of one or more dictionary words.
 
-Return the total number of provinces (groups of directly or indirectly connected cities).
+You may reuse words from the dictionary multiple times.
 
 Example 1:
-    Input: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
-    Output: 2
+    Input: s = "linkedin", wordDict = ["linked", "in"]
+    Output: True
+    Explanation: "linkedin" can be segmented as "linked in"
 
 Example 2:
-    Input: isConnected = [[1,0,0],[0,1,0],[0,0,1]]
-    Output: 3
+    Input: s = "applepenapple", wordDict = ["apple", "pen"]
+    Output: True
+    Explanation: "applepenapple" can be segmented as "apple pen apple"
+
+Example 3:
+    Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
+    Output: False
+    Explanation: no valid segmentation exists
+
+Example 4:
+    Input: s = "cars", wordDict = ["car", "ca", "rs"]
+    Output: True
+    Explanation: "cars" can be segmented as "ca rs" (not "car s")
 
 Constraints:
-    1 <= n <= 200
-    isConnected[i][i] == 1
-    isConnected[i][j] == isConnected[j][i]
+    1 <= len(s) <= 300
+    1 <= len(wordDict) <= 1000
+    1 <= len(wordDict[i]) <= 20
+    s and wordDict[i] consist of lowercase English letters
 """

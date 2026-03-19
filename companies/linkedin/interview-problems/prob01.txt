@@ -1,34 +1,44 @@
 """
-Word Break
+Lowest Common Ancestor of a Binary Tree
 
-Given a string s and a list of strings wordDict, determine if s can be 
-segmented into a space-separated sequence of one or more dictionary words.
+Given the root of a binary tree and two nodes p and q, return their lowest 
+common ancestor (LCA).
 
-You may reuse words from the dictionary multiple times.
+The lowest common ancestor is defined as the lowest node in the tree that has 
+both p and q as descendants (where a node can be a descendant of itself).
+
+Each node in the tree is represented by a TreeNode object:
+    class TreeNode:
+        def __init__(self, val=0, left=None, right=None):
+            self.val = val
+            self.left = left
+            self.right = right
 
 Example 1:
-    Input: s = "linkedin", wordDict = ["linked", "in"]
-    Output: True
-    Explanation: "linkedin" can be segmented as "linked in"
+    Input:
+        root = [3,5,1,6,2,0,8,null,null,7,4]
+        p = 5
+        q = 1
+    Output: 3
 
 Example 2:
-    Input: s = "applepenapple", wordDict = ["apple", "pen"]
-    Output: True
-    Explanation: "applepenapple" can be segmented as "apple pen apple"
+    Input:
+        root = [3,5,1,6,2,0,8,null,null,7,4]
+        p = 5
+        q = 4
+    Output: 5
 
 Example 3:
-    Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
-    Output: False
-    Explanation: no valid segmentation exists
-
-Example 4:
-    Input: s = "cars", wordDict = ["car", "ca", "rs"]
-    Output: True
-    Explanation: "cars" can be segmented as "ca rs" (not "car s")
+    Input:
+        root = [1,2]
+        p = 1
+        q = 2
+    Output: 1
 
 Constraints:
-    1 <= len(s) <= 300
-    1 <= len(wordDict) <= 1000
-    1 <= len(wordDict[i]) <= 20
-    s and wordDict[i] consist of lowercase English letters
+    2 <= number of nodes <= 10^5
+    -10^9 <= Node.val <= 10^9
+    All Node values are unique
+    p != q
+    Both p and q exist in the tree
 """
