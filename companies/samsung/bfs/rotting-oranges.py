@@ -1,45 +1,48 @@
 from collections import deque
 
 def rottingOranges(grid):
-    # let minutes be the number of minutes that has elapsed until no cell has a fresh orange
-    minutes = 0
+    # let queue be a queue that holds the rotten oranges waiting to spread rot to their neighbors, level by level
+    queue = deque()
     
-    # let queue be the order that the oranges are visited in
-    queue: deque = deque()
+    # let minutes be the total time elapsed until all oranges are rotten
+    '''
+    let fresh be the number of remaining fresh oranges after the rotting process
+    if fresh > 0, then we know some oranges were unreachable during the rotting process, so we just return -1
+    '''
+    minutes, fresh = 0, 0
     
-    # let fresh track fresh oranges so we can detect unreachable ones at the end
-    fresh = 0
-
     # add all initially rotten oranges to queue, count fresh ones
     for r in range(len(grid)):
         for c in range(len(grid[0])):
             if grid[r][c] == 2:
                 queue.append((r, c))
-            elif grid[r][c] == 1:
+            if grid[r][c] == 1:
                 fresh += 1
-    
-    # use bfs to process one full level per minute
-    # at each level, all oranges that are fresh and next to a rotting orange rot at the same time            
-    while queue:
-        # process the current level of the queue
+        
+    # 4 directions to spread the rotting: up, down, left, and right
+    directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+    while queue and fresh > 0:
+        # go through each level of the queue one by one
         for _ in range(len(queue)):
+            # get the row and column for the
             r, c = queue.popleft()
-            directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
             for dr, dc in directions:
-                nr, nc = r + dr, c + dc
-                
-                # if out of bounds, skip the rot
-                if nr < 0 or nr >= len(grid) or nc < 0 or nc >= len(grid[0]):
+                nr, nc = dr + r, dc + c
+                # skip rotting for out of bounds or non-fresh calls
+                if nr < 0 or nr >= len(grid) or nc < 0 or nc >= len(grid[0]) or grid[nr][nc] != 1:
                     continue
                 
-                # rot fresh neighbor, add to queue for next level
-                if grid[nr][nc] == 1:
-                    grid[nr][nc] = 2
-                    fresh -= 1
-                    queue.append((nr, nc))
-            
-            # one full level done = one minute elapsed
-            minutes += 1
+                # rot the neighbor and add to the next level
+                grid[nr][nc] = 2
+                
+                # add the neighbor to the queue, since its orange is now rotted
+                queue.append((nr, nc))
+                
+                # decrement the number of fresh oranges that remain
+                fresh -= 1
+        
+        # a minute passes for each level in the queue
+        minutes += 1
     
-    # if fresh > 0, some oranges were unreachable and could not be rotted, so we just return -1
+    # return the minutes if no fresh oranges remain, otherwise return -1
     return minutes if fresh == 0 else -1
